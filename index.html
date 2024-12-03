@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        button{
+            margin: 5px;
+            width: 32px; 
+            border-radius: 20px;
+        }
+        
+        input{
+            width: 170px;
+            height: 50px;
+            border-radius: 12px;
+        }
+
+        .border{
+            background-color: rgb(203, 203, 57);
+            display: inline-block;
+            border-radius: 18px;
+        }
+
+        h1{
+            margin-left:15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="border">
+    <h1>Calculator</h1>
+    <input type="text" id="val1"><br>
+    <input type="text" id="val2"><br>
+    <br>
+    <button>%</button>
+    <button>CE</button>
+    <button>C</button>
+    <button onclick=div()>/</button>
+    <br>
+    </button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button onclick=add()>+</button>
+    <br>
+    
+    <button>4</button>
+    <button>5</button>
+    
+    <button>6</button>
+    <button onclick=sub()>-</button>
+    <br>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button onclick=mul()>*</button>
+    <br>
+    <button >+/-</button>
+
+    <button>0</button>
+    <button>.</button>
+    <button>=</button></div>
+    <p id="result"></p>
+
+    <script>
+        function add(){
+            var n1=parseFloat(document.getElementById("val1").value);
+            var n2=parseFloat(document.getElementById("val2").value);
+            var result=n1+n2;
+            document.getElementById("result").innerHTML=result;
+            
+
+         }
+
+         function sub(){
+            var n1=parseFloat(document.getElementById("val1").value);
+            var n2=parseFloat(document.getElementById("val2").value);
+            var result=n1-n2;
+            document.getElementById("result").innerHTML=result;
+
+         }
+
+         function mul(){
+            var n1=parseFloat(document.getElementById("val1").value);
+            var n2=parseFloat(document.getElementById("val2").value);
+            var result=n1*n2;
+            document.getElementById("result").innerHTML=result;
+
+         }
+
+         function div(){
+            var n1=parseFloat(document.getElementById("val1").value);
+            var n2=parseFloat(document.getElementById("val2").value);
+            var result=n1/n2;
+            document.getElementById("result").innerHTML=result;
+
+         }
+    </script>
+</body>
+</html>
